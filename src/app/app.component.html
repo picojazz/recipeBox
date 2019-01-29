@@ -1,7 +1,7 @@
-<app-header></app-header>
+<app-header (featureSelected)="onNavigation($event)"></app-header>
 <div class="container">
   <div class="row">
-    <recipes></recipes>
-    <shopping-list></shopping-list>
+    <recipes *ngIf="selected === 'recipes'"></recipes>
+    <shopping-list *ngIf="selected === 'shopping-list'"></shopping-list>
   </div>
 </div>

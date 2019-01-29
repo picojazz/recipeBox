@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Ingredient } from '../shared/ingredient.model';
 
+
 @Component({
   selector: 'shopping-list',
   templateUrl: './shopping-list.component.html',
@@ -17,5 +18,8 @@ export class ShoppingListComponent implements OnInit {
 
   ngOnInit() {
   }
-
+  onRecupIngredient(ingredient:Ingredient){
+    console.log(ingredient.amount)
+    this.ingredients.push(ingredient)
+  }
 }
